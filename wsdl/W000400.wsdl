@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.taishinbank.com.tw/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WAAF" targetNamespace="http://www.taishinbank.com.tw/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.taishinbank.com.tw/" >
+      <xsd:element name="SubmitXmlSync">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="EAI">
+	            <xsd:complexType>
+		            <xsd:sequence>
+		                <xsd:element name="EAI_Header" >
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="SourceChannel" type="xsd:string"/>
+									<xsd:element name="DestinationChannel" type="xsd:string"/>
+									<xsd:element name="TransactionId" type="xsd:string"/>
+									<xsd:element name="SourceSeq" type="xsd:string"/>
+									<xsd:element name="EAIReturnCode" type="xsd:string"/>
+									<xsd:element name="HostReturnCode" type="xsd:string"/>
+									<xsd:element name="ReturnCodeDesc" type="xsd:string"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="Host_Header" >
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="BancsHeaderFiller" type="xsd:string"/>
+									<xsd:element name="MsgType" type="xsd:string"/>
+									<xsd:element name="MsgLen" type="xsd:string"/>
+									<xsd:element name="CycleNo" type="xsd:string"/>
+									<xsd:element name="MsgNo" type="xsd:string"/>
+									<xsd:element name="SegmentNo" type="xsd:string"/>
+									<xsd:element name="FrontEndNo" type="xsd:string"/>
+									<xsd:element name="TermId" type="xsd:string"/>
+									<xsd:element name="InstituteNo" type="xsd:string"/>
+									<xsd:element name="BranchId" type="xsd:string"/>
+									<xsd:element name="WorkstationNo" type="xsd:string"/>
+									<xsd:element name="TellerId" type="xsd:string"/>
+									<xsd:element name="TransactionCode" type="xsd:string"/>
+									<xsd:element name="JournalNo" type="xsd:string"/>
+									<xsd:element name="Date" type="xsd:string"/>
+									<xsd:element name="BancsReserve1" type="xsd:string"/>
+									<xsd:element name="TerminalType" type="xsd:string"/>
+									<xsd:element name="BancsReserve2" type="xsd:string"/>
+									<xsd:element name="BancsFlag1" type="xsd:string"/>
+									<xsd:element name="BancsFlag2" type="xsd:string"/>
+									<xsd:element name="BancsFlag3" type="xsd:string"/>
+									<xsd:element name="BancsFlag4" type="xsd:string"/>
+									<xsd:element name="SubsysChannel" type="xsd:string"/>
+									<xsd:element name="SupervisorID" type="xsd:string"/>
+									<xsd:element name="DebugFlag" type="xsd:string"/>
+									<xsd:element name="DebugQueue" type="xsd:string"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="Request_Data" >
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="IN-AccountNumber" type="xsd:string"/>
+									<xsd:element name="IN-Option" type="xsd:string"/>
+									<xsd:element name="IN-Opt5sel1" type="xsd:string"/>
+									<xsd:element name="IN-Opt5sel2" type="xsd:string"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+		            </xsd:sequence>
+					<xsd:attribute name="MsgName" type="xsd:string" use="required" />
+	            </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SubmitXmlSyncResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="EAII">
+	            <xsd:complexType>
+		            <xsd:sequence>
+		            	<xsd:element name="EAI_Header" >
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="SourceChannel" type="xsd:string"/>
+									<xsd:element name="DestinationChannel" type="xsd:string"/>
+									<xsd:element name="TransactionId" type="xsd:string"/>
+									<xsd:element name="SourceSeq" type="xsd:string"/>
+									<xsd:element name="EAIReturnCode" type="xsd:string"/>
+									<xsd:element name="HostReturnCode" type="xsd:string"/>
+									<xsd:element name="ReturnCodeDesc" type="xsd:string"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="Host_Header" >
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="EAIHeaderFiller" type="xsd:string"/>
+									<xsd:element name="MsgType" type="xsd:string"/>
+									<xsd:element name="MsgLen" type="xsd:string"/>
+									<xsd:element name="CycleNo" type="xsd:string"/>
+									<xsd:element name="MsgNo" type="xsd:string"/>
+									<xsd:element name="SegmentNo" type="xsd:string"/>
+									<xsd:element name="FrontEndNo" type="xsd:string"/>
+									<xsd:element name="TermId" type="xsd:string"/>
+									<xsd:element name="InstituteNo" type="xsd:string"/>
+									<xsd:element name="BranchId" type="xsd:string"/>
+									<xsd:element name="WorkstationNo" type="xsd:string"/>
+									<xsd:element name="TellerId" type="xsd:string"/>
+									<xsd:element name="TransactionCode" type="xsd:string"/>
+									<xsd:element name="JournalNo" type="xsd:string"/>
+									<xsd:element name="Date" type="xsd:string"/>
+									<xsd:element name="EAIReserve1" type="xsd:string"/>
+									<xsd:element name="TerminalType" type="xsd:string"/>
+									<xsd:element name="EAIReserve2" type="xsd:string"/>
+									<xsd:element name="EAIFlag1" type="xsd:string"/>
+									<xsd:element name="EAIFlag2" type="xsd:string"/>
+									<xsd:element name="EAIFlag3" type="xsd:string"/>
+									<xsd:element name="EAIFlag4" type="xsd:string"/>
+									<xsd:element name="SubsysChannel" type="xsd:string"/>
+									<xsd:element name="SupervisorID" type="xsd:string"/>
+									<xsd:element name="DebugFlag" type="xsd:string"/>
+									<xsd:element name="DebugQueue" type="xsd:string"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+						<xsd:element name="Response_Data">
+							<xsd:complexType>
+								<xsd:sequence>
+									<!-- 01_Rsp_Succ -->
+									<xsd:element name="OUT-AccountNo" type="xsd:string"/>
+									<xsd:element name="OUT-CurCode" type="xsd:string"/>
+									<xsd:element name="OUT-StaCode" type="xsd:string"/>
+									<xsd:element name="OUT-BrNo" type="xsd:string"/>
+									<xsd:element name="OUT-AcctTypeDesc" type="xsd:string"/>
+									<xsd:element name="OUT-AcctType" type="xsd:string"/>
+									<xsd:element name="OUT-IntCat" type="xsd:string"/>
+									<xsd:element name="OUT-IntMthd" type="xsd:string"/>
+									<xsd:element name="OUT-Rate" type="xsd:string"/>
+									<xsd:element name="OUT-AcctName" type="xsd:string"/>
+									<xsd:element name="OUT-CustName" type="xsd:string"/>
+									<xsd:element name="OUT-PhonRes" type="xsd:string"/>
+									<xsd:element name="OUT-PhonBis" type="xsd:string"/>
+									<xsd:element name="OUT-OpenDate" type="xsd:string"/>
+									<xsd:element name="OUT-LastMtnaDate" type="xsd:string"/>
+									<xsd:element name="OUT-LastFinDate" type="xsd:string"/>
+									<xsd:element name="OUT-IntFrDate" type="xsd:string"/>
+									<xsd:element name="OUT-IntToDate" type="xsd:string"/>
+									<xsd:element name="OUT-CRExpiDate" type="xsd:string"/>
+									<xsd:element name="OUT-CurtBalAmt" type="xsd:string"/>
+									<xsd:element name="OUT-UnclFund" type="xsd:string"/>
+									<xsd:element name="OUT-NpbValu" type="xsd:string"/>
+									<xsd:element name="OUT-IntAval" type="xsd:string"/>
+									<xsd:element name="OUT-PbBal" type="xsd:string"/>
+									<xsd:element name="OUT-NoIntValu" type="xsd:string"/>
+									<xsd:element name="OUT-InflatedBal" type="xsd:string"/>
+									<xsd:element name="OUT-PrevPiodIntAdj" type="xsd:string"/>
+									<xsd:element name="OUT-ChqbOnOder" type="xsd:string"/>
+									<xsd:element name="OUT-TermChq" type="xsd:string"/>
+									<xsd:element name="OUT-YtdInt" type="xsd:string"/>
+									<xsd:element name="OUT-LastOverLimDate" type="xsd:string"/>
+									<xsd:element name="OUT-YtdRwtAmt" type="xsd:string"/>
+									<xsd:element name="OUT-YtdNrwtAmt" type="xsd:string"/>
+									<xsd:element name="OUT-CrLim" type="xsd:string"/>
+									<xsd:element name="OUT-CurtVisaDrInt" type="xsd:string"/>
+									<xsd:element name="OUT-AvalCr" type="xsd:string"/>
+									<xsd:element name="OUT-CurtPurc" type="xsd:string"/>
+									<xsd:element name="OUT-LastMinPay" type="xsd:string"/>
+									<xsd:element name="OUT-CurtCashAdv" type="xsd:string"/>
+									<xsd:element name="OUT-CashAdvIntAply" type="xsd:string"/>
+									<xsd:element name="OUT-PurcIntAply" type="xsd:string"/>
+									<xsd:element name="OUT-ScrtCode" type="xsd:string"/>
+									<xsd:element name="OUT-Dlnq" type="xsd:string"/>
+									<xsd:element name="OUT-StmtFreq" type="xsd:string"/>
+									<xsd:element name="OUT-StmtCycl" type="xsd:string"/>
+									<xsd:element name="OUT-StmtDay" type="xsd:string"/>
+									<xsd:element name="OUT-Filler" type="xsd:string"/>
+									<xsd:element name="OUT-OpenPostDate" type="xsd:string"/>
+									<xsd:element name="OUT-GlClassCode" type="xsd:string"/>
+									<xsd:element name="OUT-LastActTypeChg" type="xsd:string"/>
+									<xsd:element name="OUT-OdIntAvail" type="xsd:string"/>
+									<xsd:element name="OUT-CurrBal" type="xsd:string"/>
+									<xsd:element name="OUT-AvailBal" type="xsd:string"/>
+									<xsd:element name="OUT-ChkDishonorCnt" type="xsd:string"/>
+									<xsd:element name="OUT-CanChkDishonorCnt" type="xsd:string"/>
+									<xsd:element name="OUT-AllBrAcctInd" type="xsd:string"/>
+									<xsd:element name="OUT-PsbkVerNo" type="xsd:string"/>
+									<xsd:element name="OUT-Psbk-status" type="xsd:string"/>
+									<xsd:element name="OUT-Chop-status" type="xsd:string"/>
+									<xsd:element name="OUT-CertNum" type="xsd:string"/>
+									<xsd:element name="OUT-Cert-stat" type="xsd:string"/>
+									<xsd:element name="OUT-SkliPoid" type="xsd:string"/>
+									<xsd:element name="OUT-Agremnt-signoffDate" type="xsd:string"/>
+									<xsd:element name="OUT-ComplexTd" type="xsd:string"/>
+									<xsd:element name="OUT-BlacklistDt" type="xsd:string"/>
+									<xsd:element name="OUT-ItypeIntAccr" type="xsd:string"/>
+									<xsd:element name="OUT-TrmIntAccr" type="xsd:string"/>
+									<!-- 03_Rsp_Succ -->
+									<xsd:element name="OUT-CUS-ACC-NO" type="xsd:string"/>
+									<xsd:element name="OUT-CURRENCY" type="xsd:string"/>
+									<xsd:element name="OUT-ACCT-TYPE" type="xsd:string"/>
+									<xsd:element name="OUT-ACCT-STAT" type="xsd:string"/>
+									<xsd:element name="OUT-ACCT-CAT" type="xsd:string"/>
+									<xsd:element name="OUT-BRANCH-NO" type="xsd:string"/>
+									<xsd:element name="OUT-INT-METHOD" type="xsd:string"/>
+									<xsd:element name="OUT-CURR-BAL" type="xsd:string"/>
+									<xsd:element name="OUT-UNCL-VAL" type="xsd:string"/>
+									<xsd:element name="OUT-EXEM-PROFILE" type="xsd:string"/>
+									<xsd:element name="OUT-CR-INT-INCR" type="xsd:string"/>
+									<xsd:element name="OUT-GROUP" minOccurs="0" maxOccurs="unbounded">
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="OUT-CTR" type="xsd:string" />
+												<xsd:element name="OUT-CTR_CHARGE" type="xsd:string"/>
+												<xsd:element name="OUT-ACCUM-AMT" type="xsd:string"/>
+												<xsd:element name="OUT-ACCUM-VAL-CHG" type="xsd:string"/>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+									<xsd:element name="OUT-BAL-2" type="xsd:string"/>
+									<xsd:element name="OUT-CR-INT" type="xsd:string"/>
+									<xsd:element name="OUT-DIRT" type="xsd:string"/>
+									<xsd:element name="OUT-DR-INT" type="xsd:string"/>
+									<xsd:element name="OUT-COMM-INT" type="xsd:string"/>
+									<xsd:element name="OUT-CHARGES" type="xsd:string"/>
+									<xsd:element name="OUT-PEN-NOT" type="xsd:string"/>
+									<xsd:element name="OUT-DR-TOM-ACRU" type="xsd:string"/>
+									<xsd:element name="OUT-DR-TOM-ARR-ACRU" type="xsd:string"/>
+									<xsd:element name="OUT-DR-INT-ARR-ACRU" type="xsd:string"/>
+									<xsd:element name="OUT-CR-TOM-ACRU" type="xsd:string"/>
+									<xsd:element name="OUT-CLOSE-BAL" type="xsd:string"/>
+									<!-- Rsp_Fail -->
+									<xsd:element name="OUT-RES-MSG-E" type="xsd:string"/>
+									<xsd:element name="OUT-Error-Message" type="xsd:string"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+		            </xsd:sequence>
+	            </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SubmitXmlSyncRequest">
+    <wsdl:part element="tns:SubmitXmlSync" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="SubmitXmlSyncResponse">
+    <wsdl:part element="tns:SubmitXmlSyncResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="WAAF">
+    <wsdl:operation name="SubmitXmlSync">
+      <wsdl:input message="tns:SubmitXmlSyncRequest"/>
+      <wsdl:output message="tns:SubmitXmlSyncResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WAAFSOAP" type="tns:WAAF">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="SubmitXmlSync">
+      <soap:operation soapAction="http://www.taishinbank.com.tw/SubmitXmlSync"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WAAF">
+    <wsdl:port binding="tns:WAAFSOAP" name="WAAFPort">
+      <soap:address location="http://www.aitc.com/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
